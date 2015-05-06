@@ -12,4 +12,4 @@ The draft data standard proposed here includes:
 - Required spatial relationships and logical relationships between entities, and
 - Minimum documentation requirements.
 
-Currently, this repository contains only a [draft document](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/Draft%20SCAT%20Data%20Standard.md#shoreline-cleanup-assessment-technique-scat-digital-data-standard---draft) describing the proposed standard.  In the future, template spatial and tabular data structures will be deposited here. 
+Currently, this repository contains a draft document in [markdown](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/Draft%20SCAT%20Data%20Standard.md) and [Microsoft Word](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/SCAT%20Draft%20Data%20Standard%2020150505.docx) format describing the proposed standard.  The markdown version is currently being used for version tracking and collaboratiev editing. In the future, template spatial and tabular data structures will be deposited here. 
