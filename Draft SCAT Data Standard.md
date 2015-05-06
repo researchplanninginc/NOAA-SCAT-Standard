@@ -10,11 +10,11 @@ This document describes a proposed data standard for observational Shoreline Cle
 
 The draft data standard proposed here includes:
 
-1. 1)A conceptual data model, consisting of a set of proposed entities and relationships,
-2. 2)Rules for spatial representation of these entities,
-3. 3)Required core tabular attributes describing these entities,
-4. 4)Required spatial relationships and logical relationships between entities, and
-5. 5)Minimum documentation requirements.
+1. A conceptual data model, consisting of a set of proposed entities and relationships,
+2. Rules for spatial representation of these entities,
+3. Required core tabular attributes describing these entities,
+4. Required spatial relationships and logical relationships between entities, and
+5. Minimum documentation requirements.
 
 This proposed data standard does not include mandatory logical data model (a set of explicitly required normalized tables, attributes, and relationships) for use in Geographic Information (GIS) or Relational Database Management System (RDMS) software, though it does suggest these via higher-level concepts. The spatial and attribute data required by the standard are not intended as the entirety of a fully articulated logical data model or database structure. It is expected that databases, applications, or other tools that are used to maintain data compliant with this standard will each have design requirements that require a specific logical model, or a more complex or normalized database structure. In short, the standard is a _standard_, not a database, database design, or a spatial data storage model.
 
@@ -26,7 +26,7 @@ The standard includes a few core conceptual entities, described below, including
 
 | **Shoreline w/ Segments** | **Survey on Date 1** | **Survey on Date 2** | **Treatment Recommended on Date 3** |
 | --- | --- | --- | --- |
-|<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200">| <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> |<img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> |<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200"> |
+|<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> |<img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> |<img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> |<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200"> |
 
 
 
