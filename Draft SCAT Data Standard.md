@@ -159,11 +159,11 @@ This standard includes a set of core attributes for each conceptual entity repre
 | Survey Stop Time | Time of survey end | STOP\_TIME | Time | Valid time in local time zone |
 | Tide Height | Primary tide height for period of survey | TIDE\_HGT | Text - Codeset | Codes:<br>L<br>M<br>H |
 | Survey By | Personnel conducting survey | SURV\_PER1 | Text | Name and organization of first team member conducting survey. Though not required by standard, this should be pulled from lookup table. Multiple fields required to hold unknown count of multiple values. |
-|   | SURV\_PER2 | Text | See above. |
-|   | SURV\_PER3 | Text | See above. |
-|   | SURV\_PER4 | Text | See above. |
-|   | SURV\_PER5 | Text | See above. |
-|   | SURV\_PER6 | Text | See above. |
+|   |   | SURV\_PER2 | Text | See above. |
+|   |   | SURV\_PER3 | Text | See above. |
+|   |   | SURV\_PER4 | Text | See above. |
+|   |   | SURV\_PER5 | Text | See above. |
+|   |   | SURV\_PER6 | Text | See above. |
 | Segments | Segment(s) surveyed | SEGMENTS | Text or Lookup Table |   |
 | Survey Method | Method used to conduct survey | SURVTYPE | Text - Codeset | Codes:<br>Foot<br>ATV<br>Airboat<br>Boat<br>Helicopter/Aircraft<br>Overlook |
 
