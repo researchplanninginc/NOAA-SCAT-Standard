@@ -26,14 +26,9 @@ The standard includes a few core conceptual entities, described below, including
 
 | **Shoreline w/ Segments** | **Survey on Date 1** | **Survey on Date 2** | **Treatment Recommended on Date 3** |
 | --- | --- | --- | --- |
-| <img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="180"> |
-
-
-
-
-
-
+| <img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="170"> |
 **Figure 1.** Schematic of spatial relationships among conceptual entities over time showing a shoreline partitioned into segments.  SOOs from a survey on Dates 1 and 2 are depicted as blue and red lines coincident with the shoreline for No Oiling Observed and Oiled SOOs respectively.  SSOOs from Date 2 are depicted as red and blue points in the vicinity of the shoreline for No Oiling Observed and Oiled SOOs respectively.  The extent of an STR on Date 3 is depicted as a green line coincident with the shoreline.
+
 
 ####Shoreline Representation
 Shorelines are intertidal, fluvial, or lacustrine environments where the land-water interface often changes in position and extent over both long and short time-scales. In order to accurately compare SCAT field data from multiple surveys at a single location it is necessary to reference these observations using a single digital shoreline representation. Shorelines representations are fixed, spatially unchanging extents of shoreline habitat. These may be derived from existing spatial data before a spill occurs or it may be necessary generate the Shoreline Representation after an incident has occurred. Shorelines are typically represented as a one-dimensional digital vector line, but may be represented as polygons (complex wetlands or floodplains) or, rarely, points. If a spill event persists for long enough, shoreline representations may move or change in morphology. They have no other mandatory relationships with other entities.
@@ -96,17 +91,23 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="80">
 <img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="100">
 <img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="100">
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
-
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487015/c55681d2-f374-11e4-9429-860c7e314193.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487019/cb06ab84-f374-11e4-8f5d-7ea1755ab608.jpg" width="100">
 
 **Figure 4.** All non-shoreline linear features must overlap linear shoreline features
 
 
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487023/da8f051a-f374-11e4-8888-0add82572904.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487022/d4a9777a-f374-11e4-8886-2d62d4110790.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487024/e6946de6-f374-11e4-8282-75b84ccb609e.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487028/ed1346ba-f374-11e4-8ab2-d6433607a336.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487032/f3a616ce-f374-11e4-9400-fb7aafbb29a2.jpg" width="100">
 
 **Figure 5.** All non-shoreline spatial features must be covered by polygonal shoreline features (lie in the interior or along the boundary of the polygonal shoreline feature) if such features exist.
 
@@ -174,7 +175,7 @@ This standard includes a set of core attributes for each conceptual entity repre
 | **Attribute** | **Description** | **Suggested Field Name** | **Type** | **Codeset or valid values** |
 | --- | --- | --- | --- | --- |
 | Zone ID | Unique identifier | ZONEID | Text | Alphanumeric text string containing identifier sufficient to uniquely identify oiled zone within survey |
-| Tidal Zone | Categorical descriptor for average/dominant elevation relative to tidal or other datum | TIDAL\_ZONE | Text - Codeset | LITZ<br>MITZ<br>UITZ<br>SUTZ<br>L/MITZ<br>M/UIT<br>SU/SITZ<br>L/M/UITZ<br>L/M/U/SITZ |
+| Tidal Zone | Categorical descriptor for average/dominant elevation relative to tidal or other datum | TIDAL\_ZONE | Text - Codeset | LITZ<br>MITZ<br>UITZ<br>SUTZ<br>L/MITZ<br>M/UITZ<br>U/SITZ<br>L/M/UITZ<br>L/M/U/SITZ |
 | Width | Average across-shore width of oiled zone in meters. | WIDTH | Numeric | Floating point values in meters. Zero values permitted only for NO observations. |
 | Distribution | Average areal distribution of surface oil as percentage or ratio of substrate of oiled zone or categorical descriptor of same. | OILDIST | Numeric        Text - Codeset | Floating point values as percentage or ratio. Zero values permitted only for NOO observations.  Null values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null for NO observations or only for observations with discrete oiling counts, unit areas, and sizes. CBPST |
 | Thickness | Average thickness of surface oil in cm or categorical descriptor of same | OILTHICK | Numeric       Text - Codeset | Floating point values in cm. Zero values permitted only for NO observations.  Null or blank values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null or blank for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.<br> TO<br>CV<br>CT<br>ST<br>FL |
