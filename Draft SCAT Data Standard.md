@@ -27,7 +27,7 @@ The standard includes a few core conceptual entities, described below, including
 <img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200">
 <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200">
 <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200>
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200">
 
 **Figure 1.** Schematic of spatial relationships among conceptual entities over time showing a shoreline partitioned into segments.  SOOs from a survey on Dates 1 and 2 are depicted as blue and red lines coincident with the shoreline for No Oiling Observed and Oiled SOOs respectively.  SSOOs from Date 2 are depicted as red and blue points in the vicinity of the shoreline for No Oiling Observed and Oiled SOOs respectively.  The extent of an STR on Date 3 is depicted as a green line coincident with the shoreline.
 
