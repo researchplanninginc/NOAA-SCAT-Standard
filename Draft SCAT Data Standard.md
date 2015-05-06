@@ -24,8 +24,11 @@ In addition, the standard is intended to support data management for SCAT carrie
 
 The standard includes a few core conceptual entities, described below, including shorelines, segments, surveys, surface oil observations, subsurface oil observations and treatment recommendations (Figure 1).  These entities describe general classes of data collected and managed by SCAT.
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="100">
-![Segments](https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg)
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200>
+
 **Figure 1.** Schematic of spatial relationships among conceptual entities over time showing a shoreline partitioned into segments.  SOOs from a survey on Dates 1 and 2 are depicted as blue and red lines coincident with the shoreline for No Oiling Observed and Oiled SOOs respectively.  SSOOs from Date 2 are depicted as red and blue points in the vicinity of the shoreline for No Oiling Observed and Oiled SOOs respectively.  The extent of an STR on Date 3 is depicted as a green line coincident with the shoreline.
 
 **Shoreline Representation –** Shorelines are intertidal, fluvial, or lacustrine environments where the land-water interface often changes in position and extent over both long and short time-scales. In order to accurately compare SCAT field data from multiple surveys at a single location it is necessary to reference these observations using a single digital shoreline representation. Shorelines representations are fixed, spatially unchanging extents of shoreline habitat. These may be derived from existing spatial data before a spill occurs or it may be necessary generate the Shoreline Representation after an incident has occurred. Shorelines are typically represented as a one-dimensional digital vector line, but may be represented as polygons (complex wetlands or floodplains) or, rarely, points. If a spill event persists for long enough, shoreline representations may move or change in morphology. They have no other mandatory relationships with other entities.
@@ -83,7 +86,9 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 
 
-
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="200">
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
