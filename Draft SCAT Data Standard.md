@@ -91,26 +91,26 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 
 | **OK** | **Not OK** | **Not OK** | 
-| --- | --- | --- |
+| :---: | :---: | :---: |
 |<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo1.jpg" width="80">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo2.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo3.jpg" width="100">|
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
 | **OK** | **Not OK** | 
-| --- | --- |
+| :---: | :---: |
 |<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo4.jpg" width="90">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5.jpg" width="100">|
 
 **Figure 4.** All non-shoreline linear features must overlap linear shoreline features
 
 | **OK** | **OK** | **Not OK** | **OK** | **Not OK** |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 |<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo6.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5p5.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo7.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo8.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo9.jpg" width="100">|
 
 **Figure 5.** All non-shoreline spatial features must be covered by polygonal shoreline features (lie in the interior or along the boundary of the polygonal shoreline feature) if such features exist.
 
--> | **OK** | **Not OK** | 
-| --- | --- |
-<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo10.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo11.jpg" width="100">| <-
+| **OK** | **Not OK** | 
+| :---: | :---: |
+<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo10.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo11.jpg" width="100">|
 
 **Figure 6.** All polygonal shoreline features may have interior holes, but multipart polygonal features may not have parts contained within interior holes within themselves.
 
