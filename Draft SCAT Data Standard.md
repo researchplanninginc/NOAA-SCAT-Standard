@@ -25,7 +25,8 @@ In addition, the standard is intended to support data management for SCAT carrie
 The standard includes a few core conceptual entities, described below, including shorelines, segments, surveys, surface oil observations, subsurface oil observations and treatment recommendations (Figure 1).  These entities describe general classes of data collected and managed by SCAT.
 
 | **Shoreline w/ Segments** | **Survey on Date 1** | **Survey on Date 2** | **Treatment Recommended on Date 3** |
-| <img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200"> |
+
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> <img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200"> 
 
 
 
@@ -224,18 +225,18 @@ This standard includes a set of core attributes for each conceptual entity repre
 
 In addition to spatial topological rules describing required relationships between spatial features, the standard includes requirements for logical relationships between records in data tables describing the entities involved and records in other data tables and spatial features. The standard has no requirements for how and when these logical relationships are enforced. Relationships may be enforced by rules declared as part of the logical schema of compliant databases, built into the applications that make use of these databases, or checked via Quality Assurance/Quality Control (QAQC) procedures. Briefly, this standard requires:
 
-- Ã¯ÂÂ·Ã¯ÂÂ·All spatial features describing surface oiling representations (zones) or subsurface oiling representations (pits) should have one corresponding record in the data tables containing attributes for those features.ÃÂ
-- Ã¯ÂÂ·Ã¯ÂÂ·All tabular records describing surface oiling representations (zones) or subsurface oiling representations (pits) should have one or more corresponding spatial features describing these entities.ÃÂ
-- Ã¯ÂÂ·Ã¯ÂÂ·All tabular records describing surface oiling representations (zones) or subsurface oiling representations (pits) should have a parent record in the data table containing information about surveys.ÃÂ
-- Ã¯ÂÂ·Ã¯ÂÂ·All tabular records describing surveys are required to have at least one child record in the data table containing information about surface oiling observations (zones) or subsurface oiling observations.ÃÂ
+- All spatial features describing surface oiling representations (zones) or subsurface oiling representations (pits) should have one corresponding record in the data tables containing attributes for those features.
+- All tabular records describing surface oiling representations (zones) or subsurface oiling representations (pits) should have one or more corresponding spatial features describing these entities.
+- All tabular records describing surface oiling representations (zones) or subsurface oiling representations (pits) should have a parent record in the data table containing information about surveys.
+- ll tabular records describing surveys are required to have at least one child record in the data table containing information about surface oiling observations (zones) or subsurface oiling observations.
 
 ## Metadata
 
 Documentation sufficient to allow users that did not participate in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource (NISO, 2004). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
 
-- Ã¯ÂÂ·Ã¯ÂÂ·Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata (FGDC, 1998)ÃÂ
-- Ã¯ÂÂ·Ã¯ÂÂ·ISO 19115 (ISO, 2014)ÃÂ
-- Ã¯ÂÂ·Ã¯ÂÂ·Project Open Data Metadata Schema v1.1 (POD, 2015)ÃÂ
+- Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata (FGDC, 1998)
+- ISO 19115 (ISO, 2014)
+- Project Open Data Metadata Schema v1.1 (POD, 2015)
 
 See references for internet resources specific to each of these standards. Tools enabling rapid and semi-automated creation of compliant metadata, either as stand-alone software or integrated with commercial and open source GIS and database software packages, are widely available. Compliance with a specific metadata standard is encouraged but not mandatory under the SCAT data standard. Regardless of metadata standard applied, documentation sufficient for other users to understand the content, scope, structure, logical relationships, field names and contents, and other important details is required.
 
