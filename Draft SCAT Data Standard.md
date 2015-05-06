@@ -66,7 +66,7 @@ Figure 2 is schematic of entities and their required spatial relationships over 
 
 All vector geometry features representing entities with explicit spatial representation may either tightly couple the required tabular attributes (see below) with the geometry (e.g. as attributes on a shapefile) or use a relational table structure to store the attributes elsewhere.  In the latter case, every vector geometry feature that is required to have a unique geometric representation must be have a unique ID that relates to only one tabular record.
 
-![SCAT Entities](https://cloud.githubusercontent.com/assets/6370202/7484189/8e11d2ae-f34b-11e4-8931-a3ef238fd390.jpg)
+![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCAT.jpg)
 
 **Figure 2.** Schematic of logical relationships among conceptual entities over time.  Entities with solid outlines are have unique individual spatial representations.  Entities with dashed outlines have spatial extents defined by the spatial representations of other entities.
 
