@@ -79,16 +79,16 @@ The standard requires the following topological relationships:
 - All linear features must overlap with a linear shoreline.
 - Linear features must not cross other linear features of the same type but may overlap other linear features of the same type.
 - Linear and polygonal features with multiple parts (e.g. multipart features or collections of features with the same geometry type) are permitted but not required.
-- All spatial features must be covered by a polygonal shoreline, intertidal zone, or potentially oiled area if such a feature exists (features may lie exactly on the boundary of a polygonal shoreline, but may not extend beyond)ÃÂ
+- All spatial features must be covered by a polygonal shoreline, intertidal zone, or potentially oiled area if such a feature exists (features may lie exactly on the boundary of a polygonal shoreline, but may not extend beyond)
 - Polygonal features may have interior holes, but multipart polygonal features may not have parts contained in interior holes in that feature. These must be represented as separate spatial features.
 
 See figures 3-6 below for illustrative examples. Note that the spatial relationships described here are only required for data transmitted
 
 
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="200">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="100">
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
