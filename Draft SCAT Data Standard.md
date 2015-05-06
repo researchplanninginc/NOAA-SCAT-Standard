@@ -97,7 +97,7 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487015/c55681d2-f374-11e4-9429-860c7e314193.jpg" width="100">
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487015/c55681d2-f374-11e4-9429-860c7e314193.jpg" width="80">
 <img src="https://cloud.githubusercontent.com/assets/6370202/7487019/cb06ab84-f374-11e4-8f5d-7ea1755ab608.jpg" width="100">
 
 **Figure 4.** All non-shoreline linear features must overlap linear shoreline features
@@ -158,7 +158,7 @@ This standard includes a set of core attributes for each conceptual entity repre
 | Survey Date | Date of start | SURVDATE | Date | Valid date in local time zone |
 | Survey Start Time | Time of survey start | START\_TIME | Time | Valid time in local time zone |
 | Survey Stop Time | Time of survey end | STOP\_TIME | Time | Valid time in local time zone |
-| Tide Height | Primary tide height for period of survey | TIDE\_HGT | Text - Codeset | L<br>M<br>H |
+| Tide Height | Primary tide height for period of survey | TIDE\_HGT | Text - Codeset | Codes:<br>L<br>M<br>H |
 | Survey By | Personnel conducting survey | SURV\_PER1 | Text | Name and organization of first team member conducting survey. Though not required by standard, this should be pulled from lookup table. Multiple fields required to hold unknown count of multiple values. |
 |   | SURV\_PER2 | Text | See above. |
 |   | SURV\_PER3 | Text | See above. |
@@ -166,7 +166,7 @@ This standard includes a set of core attributes for each conceptual entity repre
 |   | SURV\_PER5 | Text | See above. |
 |   | SURV\_PER6 | Text | See above. |
 | Segments | Segment(s) surveyed | SEGMENTS | Text or Lookup Table |   |
-| Survey Method | Method used to conduct survey | SURVTYPE | Text - Codeset | Foot<br>ATV<br>Airboat<br>Boat<br>Helicopter/Aircraft<br>Overlook |
+| Survey Method | Method used to conduct survey | SURVTYPE | Text - Codeset | Codes:<br>Foot<br>ATV<br>Airboat<br>Boat<br>Helicopter/Aircraft<br>Overlook |
 
 
 
@@ -177,15 +177,15 @@ This standard includes a set of core attributes for each conceptual entity repre
 | Zone ID | Unique identifier | ZONEID | Text | Alphanumeric text string containing identifier sufficient to uniquely identify oiled zone within survey |
 | Tidal Zone | Categorical descriptor for average/dominant elevation relative to tidal or other datum | TIDAL\_ZONE | Text - Codeset | Codes:<br>LITZ<br>MITZ<br>UITZ<br>SUTZ<br>L/MITZ<br>M/UITZ<br>U/SITZ<br>L/M/UITZ<br>L/M/U/SITZ |
 | Width | Average across-shore width of oiled zone in meters. | WIDTH | Numeric | Floating point values in meters. Zero values permitted only for NO observations. |
-| Distribution | Average areal distribution of surface oil as percentage or ratio of substrate of oiled zone or categorical descriptor of same. | OILDIST | Numeric        Text - Codeset | Floating point values as percentage or ratio. Zero values permitted only for NOO observations.  Null values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null for NO observations or only for observations with discrete oiling counts, unit areas, and sizes. <br>Codes:<br>C<br>B<br>P<br>S<br>T |
-| Thickness | Average thickness of surface oil in cm or categorical descriptor of same | OILTHICK | Numeric       Text - Codeset | Floating point values in cm. Zero values permitted only for NO observations.  Null or blank values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null or blank for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.<br>Codes:<br>TO<br>CV<br>CT<br>ST<br>FL |
-| Character | Categorical descriptor of dominant oil character within oiled zone | OILCHAR | Text - Codeset | May only be null or blank only for observations with discrete oiling counts, unit areas, and sizes.<br>Codes:<br> FR<br>MS<br>TB<br>PT<br>TC<br>SR<br>AP<br>NO |
-| Substrate | Categorical descriptor for location of surface oil (sediment/soil, vegetation canopy, or both) | SUBSTR | Text - Codeset | Null or blank values permitted only for NO observations.<br>Codes:<br>S<br>V<br>B |
+| Distribution | Average areal distribution of surface oil as percentage or ratio of substrate of oiled zone or categorical descriptor of same. | OILDIST | Numeric        Text - Codeset | Floating point values as percentage or ratio. Zero values permitted only for NOO observations.  Null values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null for NO observations or only for observations with discrete oiling counts, unit areas, and sizes. <br><br>Codes:<br>C<br>B<br>P<br>S<br>T |
+| Thickness | Average thickness of surface oil in cm or categorical descriptor of same | OILTHICK | Numeric       Text - Codeset | Floating point values in cm. Zero values permitted only for NO observations.  Null or blank values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null or blank for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.<br><br>Codes:<br>TO<br>CV<br>CT<br>ST<br>FL |
+| Character | Categorical descriptor of dominant oil character within oiled zone | OILCHAR | Text - Codeset | May only be null or blank only for observations with discrete oiling counts, unit areas, and sizes.<br><br>Codes:<br> FR<br>MS<br>TB<br>PT<br>TC<br>SR<br>AP<br>NO |
+| Substrate | Categorical descriptor for location of surface oil (sediment/soil, vegetation canopy, or both) | SUBSTR | Text - Codeset | Null or blank values permitted only for NO observations.<br><br>Codes:<br>S<br>V<br>B |
 | Discrete oiling count per unit area | Count per unit area of tarballs or residue balls in oiled zone | TB\_CNT | Numeric | Integer values. Zero values permitted only for NO observations or observations with areal distribution and thickness as above. |
-| Discrete oiling count unit area | Unit area of count of tarballs or residue balls in oiled zone | TB\_AREA | Text - Codeset | Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.<br>Codes:<br> M2<br>M<br>100M<br>ZONE |
+| Discrete oiling count unit area | Unit area of count of tarballs or residue balls in oiled zone | TB\_AREA | Text - Codeset | Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.<br><br>Codes:<br> M2<br>M<br>100M<br>ZONE |
 | Discrete oiling avg. size | Average planimetric diameter in cm of tarballs or residue balls in oiled zone. | TB\_AVSIZE | Numeric | Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above. |
 | Discrete oiling large size | Largest planimetric diameter in cm of tarballs or residue balls in oiled zone. | TB\_LGSIZE | Numeric | Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above. |
-| Type of discrete oiling | Dominant categorical descriptor of tarballs, residue balls or other discrete oiling within oiled zone | TB\_TYPE | Text - Codeset | Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.<br>Codes:<br>S<br>W<br>SRB<br> |
+| Type of discrete oiling | Dominant categorical descriptor of tarballs, residue balls or other discrete oiling within oiled zone | TB\_TYPE | Text - Codeset | Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.<br><br>Codes:<br>S<br>W<br>SRB<br> |
 | Plant oiling bottom elevation | Average vertical elevation of lowest oiling on plant canopy in cm from sediment surface | P\_OILBOT | Numeric | Floating point values in centimeters. |
 | Plant oiling top elevation | Average vertical elevation of highest oiling on plant canopy in cm from sediment substrate | P\_OILTOP | Numeric | Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate <> P or B). |
 | ESI Type | ESI type | ESI | Text - Codeset | See NOAA, 2003. |
@@ -202,8 +202,8 @@ This standard includes a set of core attributes for each conceptual entity repre
 | Pit depth | Maximum depth of subsurface pit, trench or core in cm below sediment surface. | DEPTH | Numeric | Floating point values in centimeters. No zero values permitted. |
 | Oiling top depth | Average depth of the top of observed subsurface oiling in cm below sediment surface. | OIL\_TOP | Numeric | Floating point values in centimeters. Null or blank values only permitted for NO observations. |
 | Oiling bottom depth | Average depth of the bottom of observed subsurface oiling in cm below sediment surface. | OIL\_BOT | Numeric | Floating point values in centimeters. Zero, null or blank values permitted only for NO observations. |
-| Character | Categorical descriptor of dominant oil character within oiled pit | OILCHAR | Text - Codeset | Null or blank values not permitted.<br>Codes:<br>SR<br>SAP<br>OP<br>PP<br>OR<br>OF<br>TR<br>NO |
-| Distribution | Average areal distribution of subsurface oil within vertical oil interval as percentage or ratio of surface area in excavated pit, trench, or core or categorical descriptor of same. | OILDIST | Numeric    Text - Codeset | Floating point values as percentage or ratio. Zero values permitted only for NOO observations. Codes:<br>C<br>P<br>S<br>T |
+| Character | Categorical descriptor of dominant oil character within oiled pit | OILCHAR | Text - Codeset | Null or blank values not permitted.<br><br>Codes:<br>SR<br>SAP<br>OP<br>PP<br>OR<br>OF<br>TR<br>NO |
+| Distribution | Average areal distribution of subsurface oil within vertical oil interval as percentage or ratio of surface area in excavated pit, trench, or core or categorical descriptor of same. | OILDIST | Numeric    Text - Codeset | Floating point values as percentage or ratio. Zero values permitted only for NOO observations. <br><br>Codes:<br>C<br>P<br>S<br>T |
 | Depth to Water Table | Average depth of the bottom of observed water level in cm below sediment surface | WATER\_DEP | Numeric  | Floating point values in centimeters. |
 | Sheen Color | Categorical descriptor of sheen on water table in pit, trench, or core if present | SHEEN | Text - Codeset | Codes:<br>B<br>R<br>S<br>N |
 | Clean Below | Boolean indicator of presence of clean sediment below oiled sediment | CLN\_BELOW | Text - Codeset | YN |
