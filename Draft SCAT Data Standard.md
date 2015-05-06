@@ -238,7 +238,7 @@ In addition to spatial topological rules describing required relationships betwe
 
 ## Metadata
 
-Documentation sufficient to allow users that did not participate in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource (NISO, 2004). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
+Documentation sufficient to allow users that did not participate in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource  [(NISO, 2004)](http://www.niso.org/publications/press/UnderstandingMetadata.pdf). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
 
 - Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata (FGDC, 1998)
 - ISO 19115 (ISO, 2014)
@@ -268,7 +268,7 @@ National Oceanic and Atmospheric Administration (NOAA) Office of Response and Re
 
 National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration. 2002. Environmental Sensitivity Index Guidelines, version 3.0. NOAA Technical Memorandum NOS OR&R 11. Seattle: NOAA, Office of Response and Restoration, Hazardous Materials Response and Assessment Division, 129 p
 
-National Information Standards Organization (NISO). 2004. Understanding Metadata. National Information Standards Organization, Bethesda, MD.
+National Information Standards Organization (NISO). 2004. Understanding Metadata. National Information Standards Organization, Bethesda, MD. Accessible online at: [http://www.niso.org/publications/press/UnderstandingMetadata.pdf](http://www.niso.org/publications/press/UnderstandingMetadata.pdf)
 
 Owens, E.H., and G.A. Sergy. 2000. The SCAT Manual: A Field Guide to the Documentation and Description of Oiled Shorelines. Second Edition. Environment Canada, Edmonton, Alberta, Canada. 108 pages.
 
@@ -280,7 +280,7 @@ Project Open Data (POD). 2015. Project Open Data Metadata Schema v1.1. Accessibl
 
 ## Appendix A – Example Shoreline Observation Form
 
-
+![SCAT Form](https://cloud.githubusercontent.com/assets/6370202/7495807/e4ca6b80-f3d5-11e4-81f4-4375298d2cb4.png)
 
 ## Appendix B - Data Interchange File Formats and Naming Conventions
 
