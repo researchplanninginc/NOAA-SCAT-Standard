@@ -1,4 +1,5 @@
-# Shoreline Cleanup Assessment Technique (SCAT) Digital Data Standard - Draft
+# Shoreline Cleanup Assessment Technique (SCAT) 
+# Digital Data Standard - Draft
 
 **5/1/2015**
 
@@ -90,28 +91,27 @@ The standard requires the following topological relationships:
 See figures 3-6 below for illustrative examples. Note that the spatial relationships described here are only required for data transmitted
 
 
-
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="80">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="100">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="100">
+| **OK** | **Not OK** | **Not OK* | 
+| --- | --- | --- |
+|<img src="https://cloud.githubusercontent.com/assets/6370202/7484209/b2824466-f34b-11e4-9b84-61e2a312d9d8.jpg" width="80">|<img src="https://cloud.githubusercontent.com/assets/6370202/7484212/b93527ec-f34b-11e4-8f8e-fcde59d566bd.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7484213/bde316a0-f34b-11e4-850b-455e67d9ad5b.jpg" width="100">|
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487015/c55681d2-f374-11e4-9429-860c7e314193.jpg" width="80">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487019/cb06ab84-f374-11e4-8f5d-7ea1755ab608.jpg" width="100">
+| **OK** | **Not OK** | 
+| --- | --- |
+|<img src="https://cloud.githubusercontent.com/assets/6370202/7487015/c55681d2-f374-11e4-9429-860c7e314193.jpg" width="90">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487019/cb06ab84-f374-11e4-8f5d-7ea1755ab608.jpg" width="100">|
 
 **Figure 4.** All non-shoreline linear features must overlap linear shoreline features
 
-
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487023/da8f051a-f374-11e4-8888-0add82572904.jpg" width="100">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487022/d4a9777a-f374-11e4-8886-2d62d4110790.jpg" width="100">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487024/e6946de6-f374-11e4-8282-75b84ccb609e.jpg" width="100">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487028/ed1346ba-f374-11e4-8ab2-d6433607a336.jpg" width="100">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487032/f3a616ce-f374-11e4-9400-fb7aafbb29a2.jpg" width="100">
+| **OK** | **OK** | **Not OK** | **OK** | **Not OK** |
+| --- | --- | --- | --- | --- |
+|<img src="https://cloud.githubusercontent.com/assets/6370202/7487023/da8f051a-f374-11e4-8888-0add82572904.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487022/d4a9777a-f374-11e4-8886-2d62d4110790.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487024/e6946de6-f374-11e4-8282-75b84ccb609e.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487028/ed1346ba-f374-11e4-8ab2-d6433607a336.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487032/f3a616ce-f374-11e4-9400-fb7aafbb29a2.jpg" width="100">|
 
 **Figure 5.** All non-shoreline spatial features must be covered by polygonal shoreline features (lie in the interior or along the boundary of the polygonal shoreline feature) if such features exist.
 
-
+| **OK** | **Not OK** | 
+| --- | --- |
+<img src="https://cloud.githubusercontent.com/assets/6370202/7487033/f8c632b0-f374-11e4-9eb3-7258d36f3114.jpg" width="100">|<img src="https://cloud.githubusercontent.com/assets/6370202/7487035/0101398e-f375-11e4-81f1-1d7b86883ddd.jpg" width="100">|
 
 **Figure 6.** All polygonal shoreline features may have interior holes, but multipart polygonal features may not have parts contained within interior holes within themselves.
 
