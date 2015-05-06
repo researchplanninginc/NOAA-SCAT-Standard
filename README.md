@@ -1,4 +1,4 @@
-# NOAA-SCAT-Standard
+# NOAA SCAT Data Standard
 
 <img src="https://cloud.githubusercontent.com/assets/6370202/7496276/df14f7ca-f3d8-11e4-8086-d51a3754dff4.jpg" width="200">
 
