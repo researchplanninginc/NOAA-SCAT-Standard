@@ -6,7 +6,7 @@
 
 This document describes a proposed data standard for observational Shoreline Cleanup Assessment Technique (SCAT) data collected by field survey teams during oil spills and similar incidents to evaluate shoreline oiling, recommend and guide treatment, and document compliance with cleanup endpoints. The volume of data collected and developed during oil spill response is growing at an ever increasing rate. This places a substantial burden on the response to be able to rapidly digest and interpret those data to inform operational decision making. This growth in the data management workload has been facilitated by the rapid evolution of electronic field data collection tools, data storage systems and common operational displays. Absent a common vision for how these systems will work together, these tools will be unable to provide a pathway to distill these data and translate them into operationally meaningful information.
 
-This draft standard was developed by the National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration (OR&R), Emergency Response Division (ERD). While there are a variety of SCAT or similar protocols and processes that exist (CEDRE, 2006; [MCA, 2007](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/297968/ukscatman.pdf); [Owens and Sergy, 2000](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202000%20SCAT%20Manual%202nd%20Edition/SCAT%20Manual%20Complete.pdf); [Owens and Sergy 2004](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202004%20Arctic%20SCAT.pdf)), this standard is intended to support the storage and manipulation of SCAT data to support the SCAT process as described in the NOAA Shoreline Assessment Manual ([NOAA, 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf)). This standard is provided to the response community as a common point of reference in the development of electronic field data collection tools, databases and information products for SCAT activities. This is a voluntary standard that will be maintained and updated by NOAA based on input from the response community and the evolution of new technologies.
+This draft standard was developed by the National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration (OR&R), Emergency Response Division (ERD). While there are a variety of SCAT or similar protocols and processes that exist ([CEDRE, 2006](http://wwz.cedre.fr/en/Our-resources/Documentation/Operational-guides/Surveying-Sites); [MCA, 2007](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/297968/ukscatman.pdf); [Owens and Sergy, 2000](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202000%20SCAT%20Manual%202nd%20Edition/SCAT%20Manual%20Complete.pdf); [Owens and Sergy 2004](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202004%20Arctic%20SCAT.pdf)), this standard is intended to support the storage and manipulation of SCAT data to support the SCAT process as described in the NOAA Shoreline Assessment Manual ([NOAA, 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf)). This standard is provided to the response community as a common point of reference in the development of electronic field data collection tools, databases and information products for SCAT activities. This is a voluntary standard that will be maintained and updated by NOAA based on input from the response community and the evolution of new technologies.
 
 The draft data standard proposed here includes:
 
@@ -240,21 +240,19 @@ In addition to spatial topological rules describing required relationships betwe
 
 Documentation sufficient to allow users that did not participate in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource  [(NISO, 2004)](http://www.niso.org/publications/press/UnderstandingMetadata.pdf). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
 
-- Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata (FGDC, 1998)
-- ISO 19115 (ISO, 2014)
-- Project Open Data Metadata Schema v1.1 (POD, 2015)
+- Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata ([FGDC, 1998](http://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/base-metadata/v2\_0698.pdf))
+- ISO 19115 ([ISO, 2014](http://www.iso.org/iso/home/store/catalogue\_ics/catalogue\_detail\_ics.htm?csnumber=53798))
+- Project Open Data Metadata Schema v1.1 ([POD, 2015](https://project-open-data.cio.gov/v1.1/schema/))
 
 See references for internet resources specific to each of these standards. Tools enabling rapid and semi-automated creation of compliant metadata, either as stand-alone software or integrated with commercial and open source GIS and database software packages, are widely available. Compliance with a specific metadata standard is encouraged but not mandatory under the SCAT data standard. Regardless of metadata standard applied, documentation sufficient for other users to understand the content, scope, structure, logical relationships, field names and contents, and other important details is required.
 
 ## References
 
-CEDRE, 2006. Surveying Sites Polluted by Oil. An Operational Guide for Conducting an Assessment. Centre de documentation, de recherche et d'experimentations sur les pollutions accidentelles dex eaux, Brest, France, 41 pp.
+CEDRE, 2006. Surveying Sites Polluted by Oil. An Operational Guide for Conducting an Assessment. Centre de documentation, de recherche et d'experimentations sur les pollutions accidentelles dex eaux, Brest, France, 41 pp. Available online at: http://wwz.cedre.fr/en/Our-resources/Documentation/Operational-guides/Surveying-Sites
 
-http://wwz.cedre.fr/en/Our-resources/Documentation/Operational-guides/Surveying-Sites
+Clementini, E., P. Di Felice, and P. van Oosterom. 1993. "A small set of formal topological relationships suitable for end-user interaction". In Abel, David; Ooi, Beng Chin. Advances in Spatial Databases: Third International Symposium, SSD '93 Singapore, June 23–25, 1993 Proceedings. Lecture Notes in Computer Science. 692/1993. Springer. pp. 277–295. Available online at: http://dx.doi.org/10.1007/3-540-56869-7_16
 
-Clementini, E., P. Di Felice, and P. van Oosterom. 1993. "A small set of formal topological relationships suitable for end-user interaction". In Abel, David; Ooi, Beng Chin. Advances in Spatial Databases: Third International Symposium, SSD '93 Singapore, June 23–25, 1993 Proceedings. Lecture Notes in Computer Science. 692/1993. Springer. pp. 277–295. http://dx.doi.org/10.1007/3-540-56869-7_16
-
-Egenhofer, M.J. and R.D. Franzosa. 1991. Point-set topological spatial relations. International Journal of Geographical Information Systems 5(2):161-174. http://dx.doi.org/10.1080/02693799108927841 
+Egenhofer, M.J. and R.D. Franzosa. 1991. Point-set topological spatial relations. International Journal of Geographical Information Systems 5(2):161-174. Available online at: http://dx.doi.org/10.1080/02693799108927841 
 
 Federal Geographic Data Committee. FGDC-STD-001-1998. Content standard for digital geospatial metadata (revised June 1998). Federal Geographic Data Committee. Washington, D.C. Available online at: http://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/base-metadata/v2\_0698.pdf
 
@@ -262,22 +260,22 @@ International Standards Organization (ISO). 1998. ISO 8859-1:1998 Information te
 
 International Standards Organization (ISO). 2014. ISO 19115:2014 Geographic information – Metadata. International Standards Organization, Geneva, Switzerland. Available online at: http://www.iso.org/iso/home/store/catalogue\_ics/catalogue\_detail\_ics.htm?csnumber=53798
 
-Lamarche, A., G.A. Sergy, and E.H. Owens. 2007. Shoreline Cleanup Assessment Technique (SCAT) Data Management Manual, Emergencies Science and Technology Division, Science and Technology Branch, Environment Canada, Ottawa, ON.  Accessible online at: [http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202007%20SCAT%20Data%20Management%20Manual.pdf](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202007%20SCAT%20Data%20Management%20Manual.pdf)
+Lamarche, A., G.A. Sergy, and E.H. Owens. 2007. Shoreline Cleanup Assessment Technique (SCAT) Data Management Manual, Emergencies Science and Technology Division, Science and Technology Branch, Environment Canada, Ottawa, ON.  Accessible online at: http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202007%20SCAT%20Data%20Management%20Manual.pdf
 
-MCA, 2007. The UK SCAT Manual. A Field Guide to the Documentation of Oiled Shorelines in the UK. UK Maritime & Coastguard Agency, Southampton, UK. 47 pp. + vi. Accessible online at: [https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/297968/ukscatman.pdf](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/297968/ukscatman.pdf)
+MCA, 2007. The UK SCAT Manual. A Field Guide to the Documentation of Oiled Shorelines in the UK. UK Maritime & Coastguard Agency, Southampton, UK. 47 pp. + vi. Accessible online at: https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/297968/ukscatman.pdf
 
 National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration. 2013 Shoreline Assessment Manual, 4th Edition. Office of Response and Restoration, National Oceanic and Atmospheric Administration. 73 pp. + appendices.
-Accessible online at: [http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf)
+Accessible online at: http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf
 
-National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration. 2002. Environmental Sensitivity Index Guidelines, version 3.0. NOAA Technical Memorandum NOS OR&R 11. Seattle: NOAA, Office of Response and Restoration, Hazardous Materials Response and Assessment Division, 129 p. Accessible online at: [http://response.restoration.noaa.gov/sites/default/files/ESI_Guidelines.pdf](http://response.restoration.noaa.gov/sites/default/files/ESI_Guidelines.pdf)
+National Oceanic and Atmospheric Administration (NOAA) Office of Response and Restoration. 2002. Environmental Sensitivity Index Guidelines, version 3.0. NOAA Technical Memorandum NOS OR&R 11. Seattle: NOAA, Office of Response and Restoration, Hazardous Materials Response and Assessment Division, 129 p. Accessible online at: http://response.restoration.noaa.gov/sites/default/files/ESI_Guidelines.pdf
 
-National Information Standards Organization (NISO). 2004. Understanding Metadata. National Information Standards Organization, Bethesda, MD. Accessible online at: [http://www.niso.org/publications/press/UnderstandingMetadata.pdf](http://www.niso.org/publications/press/UnderstandingMetadata.pdf)
+National Information Standards Organization (NISO). 2004. Understanding Metadata. National Information Standards Organization, Bethesda, MD. Accessible online at: http://www.niso.org/publications/press/UnderstandingMetadata.pdf
 
-Owens, E.H., and G.A. Sergy. 2000. The SCAT Manual: A Field Guide to the Documentation and Description of Oiled Shorelines. Second Edition. Environment Canada, Edmonton, Alberta, Canada. 108 pages. Accessible online at: [http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202000%20SCAT%20Manual%202nd%20Edition/SCAT%20Manual%20Complete.pdf](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202000%20SCAT%20Manual%202nd%20Edition/SCAT%20Manual%20Complete.pdf)
+Owens, E.H., and G.A. Sergy. 2000. The SCAT Manual: A Field Guide to the Documentation and Description of Oiled Shorelines. Second Edition. Environment Canada, Edmonton, Alberta, Canada. 108 pages. Accessible online at: http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202000%20SCAT%20Manual%202nd%20Edition/SCAT%20Manual%20Complete.pdf
 
-Owens, E.H., and G.A. Sergy. 2004. The Arctic SCAT Manual – A Field Guide to the Documentation and Description of Oiled Shorelines in Arctic Environments. Edmonton, Alberta: Environment Canada. 172 pp. Accessible online at: [http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202004%20Arctic%20SCAT.pdf/](http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202004%20Arctic%20SCAT.pdf)
+Owens, E.H., and G.A. Sergy. 2004. The Arctic SCAT Manual – A Field Guide to the Documentation and Description of Oiled Shorelines in Arctic Environments. Edmonton, Alberta: Environment Canada. 172 pp. Accessible online at: http://www.shorelinescat.com/Documents/Manuals/Environment%20Canada%202004%20Arctic%20SCAT.pdf
 
-Project Open Data (POD). 2015. Project Open Data Metadata Schema v1.1. Accessible online at: [https://project-open-data.cio.gov/v1.1/schema/](https://project-open-data.cio.gov/v1.1/schema/)
+Project Open Data (POD). 2015. Project Open Data Metadata Schema v1.1. Accessible online at: https://project-open-data.cio.gov/v1.1/schema/
 
 
 
