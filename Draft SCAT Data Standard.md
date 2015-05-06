@@ -24,10 +24,13 @@ In addition, the standard is intended to support data management for SCAT carrie
 
 The standard includes a few core conceptual entities, described below, including shorelines, segments, surveys, surface oil observations, subsurface oil observations and treatment recommendations (Figure 1).  These entities describe general classes of data collected and managed by SCAT.
 
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200">
-<img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200">
+| **Shoreline w/ Segments** | **Survey on Date 1** | **Survey on Date 2** | **Treatment Recommended on Date 3** |
+| <img src="https://cloud.githubusercontent.com/assets/6370202/7484198/9f9169d6-f34b-11e4-881f-efde39fbe3ef.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484200/a50c967e-f34b-11e4-9b77-55248a88e2b3.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7484205/ac3970b6-f34b-11e4-9784-cfc3ad961bba.jpg" width="200"> | <img src="https://cloud.githubusercontent.com/assets/6370202/7487036/05c8f088-f375-11e4-8122-921f1732d019.jpg" width="200"> |
+
+
+
+
+
 
 **Figure 1.** Schematic of spatial relationships among conceptual entities over time showing a shoreline partitioned into segments.  SOOs from a survey on Dates 1 and 2 are depicted as blue and red lines coincident with the shoreline for No Oiling Observed and Oiled SOOs respectively.  SSOOs from Date 2 are depicted as red and blue points in the vicinity of the shoreline for No Oiling Observed and Oiled SOOs respectively.  The extent of an STR on Date 3 is depicted as a green line coincident with the shoreline.
 
@@ -71,7 +74,7 @@ All vector geometry features representing entities with explicit spatial represe
 
 Topology, defined here as the properties of geometric features in two dimensions, is a way to define and explicitly test for properties like adjacency, connectivity, proximity, and coincidence. Certain topological relationships are required by the standard for features with polygonal and linear spatial representations. These relationships are referenced in the descriptions of conceptual entities above. Most importantly, it is required that all linear surface oiling representations (zones) must be coincident with the linear shoreline representation. If any other entities such as subsurface oiling representations, shoreline treatment recommendations, or other entities are represented as linear features, these must also be coincident with the linear shoreline representation. The standard requires that these relationships exist, but does not have any requirements for how these relationships are enforced. This standard makes reference to spatial relationships described in the DE-9IM model (Clementini et al., 1993; Egenhoffer and Herring, 1991) which is implemented in standard GIS software and spatial databases.
 
-The standard does not require that raw spatial data (e.g. field collected coordinates) or interim analysis products stored within a GIS or RDBMS software system comply with these topological rules.  The standard does require that topologically compliant data is either automatically or regularly generated as part of any such software systems and associated data management processes, or is readily and simply generated upon request.
+The standard does not require that raw spatial data (e.g. field collected coordinates) or interim analysis products stored within a GIS or RDBMS software system comply with these topological rules.  However, the standard does require that topologically compliant data is either: 1.) automatically or regularly generated as part of such software systems and associated data management processes, or 2.) is readily and simply generated when generating data for export or interchange.
 
 The standard requires the following topological relationships:
 
