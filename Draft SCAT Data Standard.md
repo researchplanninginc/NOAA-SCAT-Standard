@@ -26,7 +26,7 @@ The standard includes a few core conceptual entities, described below, including
 
 | **Shoreline w/ Segments** | **Survey on Date 1** | **Survey on Date 2** | **Treatment on Date 3** |
 | :---: | :---: | :---: | :---: |
-| <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/segs.jpg" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/surv1.jpg" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/surv2.jpg" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/treat.jpg" width="200"> |
+| <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/segs.jpg?raw=true" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/surv1.jpg?raw=true" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/surv2.jpg?raw=true" width="200"> | <img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/treat.jpg?raw=true" width="200"> |
 **Figure 1.** Schematic of spatial relationships among conceptual entities over time showing a shoreline partitioned into segments.  SOOs from a survey on Dates 1 and 2 are depicted as blue and red lines coincident with the shoreline for No Oiling Observed and Oiled SOOs respectively.  SSOOs from Date 2 are depicted as red and blue points in the vicinity of the shoreline for No Oiling Observed and Oiled SOOs respectively.  The extent of an STR on Date 3 is depicted as a green line coincident with the shoreline.
 
 
@@ -66,7 +66,7 @@ Figure 2 is schematic of entities and their required spatial relationships over 
 
 All vector geometry features representing entities with explicit spatial representation may either tightly couple the required tabular attributes (see below) with the geometry (e.g. as attributes on a shapefile) or use a relational table structure to store the attributes elsewhere.  In the latter case, every vector geometry feature that is required to have a unique geometric representation must be have a unique ID that relates to only one tabular record.
 
-![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCAT.jpg)
+![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCAT.jpg?raw=true)
 
 **Figure 2.** Schematic of logical relationships among conceptual entities over time.  Entities with solid outlines are have unique individual spatial representations.  Entities with dashed outlines have spatial extents defined by the spatial representations of other entities.
 
@@ -92,25 +92,25 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 | **OK** | **Not OK** | **Not OK** | 
 | :---: | :---: | :---: |
-|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo1.jpg" width="80">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo2.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo3.jpg" width="100">|
+|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo1.jpg?raw=true" width="80">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo2.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo3.jpg?raw=true" width="100">|
 
 **Figure 3.** Linear features may intersect other linear features at endpoints but may not self-cross, or self-overlap.
 
 | **OK** | **Not OK** | 
 | :---: | :---: |
-|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo4.jpg" width="90">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5.jpg" width="100">|
+|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo4.jpg?raw=true" width="90">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5.jpg?raw=true" width="100">|
 
 **Figure 4.** All non-shoreline linear features must overlap linear shoreline features
 
 | **OK** | **OK** | **Not OK** | **OK** | **Not OK** |
 | :---: | :---: | :---: | :---: | :---: |
-|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo6.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5p5.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo7.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo8.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo9.jpg" width="100">|
+|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo6.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo5p5.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo7.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo8.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo9.jpg?raw=true" width="100">|
 
 **Figure 5.** All non-shoreline spatial features must be covered by polygonal shoreline features (lie in the interior or along the boundary of the polygonal shoreline feature) if such features exist.
 
 | **OK** | **Not OK** | 
 | :---: | :---: |
-<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo10.jpg" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo11.jpg" width="100">|
+<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo10.jpg?raw=true" width="100">|<img src="https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo11.jpg?raw=true" width="100">|
 
 **Figure 6.** All polygonal shoreline features may have interior holes, but multipart polygonal features may not have parts contained within interior holes within themselves.
 
@@ -281,7 +281,7 @@ Project Open Data (POD). 2015. Project Open Data Metadata Schema v1.1. Accessibl
 
 ## Appendix A – Example Shoreline Observation Form
 
-![SCAT Form](https://cloud.githubusercontent.com/assets/6370202/7495807/e4ca6b80-f3d5-11e4-81f4-4375298d2cb4.png)
+![SCAT Form](https://cloud.githubusercontent.com/assets/6370202/7495807/e4ca6b80-f3d5-11e4-81f4-4375298d2cb4.png?raw=true)
 
 ## Appendix B - Data Interchange File Formats and Naming Conventions
 
