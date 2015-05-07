@@ -1,6 +1,6 @@
 # Shoreline Cleanup Assessment Technique (SCAT) Digital Data Standard - Draft
 
-**5/1/2015**
+**5/7/2015**
 
 ## Purpose
 
