@@ -63,7 +63,7 @@ Other conceptual entities are also required to have spatial representations, but
 
 Figure 2 is schematic of entities and their required spatial relationships over time. Surveys are required to have spatial extents consisting only of their children surface and subsurface shoreline observations. STRs may have spatial extents defined by one or more SOOs or SSOOs, one or more segments, or some other portion of a shoreline representation, or some other spatial extent.  If an STR may be uniquely defined by reference to other entities, then it can be spatially represented by a non-spatial list of these other features.  If an STR has a spatial extent that cannot be uniquely defined by one or more SOOs, SSOOs, or segments, then it must be represented by explicit vector geometry.
 
-![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCAT.png?raw=true)
+![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCATv2.png?raw=true)
 
 **Figure 2.** Schematic of logical relationships among conceptual entities over time.  Entities with solid outlines are have unique individual spatial representations.  Entities with dashed outlines have spatial extents defined by the spatial representations of other entities.
 
