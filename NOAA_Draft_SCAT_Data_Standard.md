@@ -226,7 +226,7 @@ In addition to spatial topological rules describing required relationships betwe
 
 ## Metadata
 
-Documentation sufficient to allow users that did not participate in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource  [(NISO, 2004)](http://www.niso.org/publications/press/UnderstandingMetadata.pdf). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
+Documentation sufficient to allow users not participating in data collection or management during a spill event to understand and use SCAT data is a mandatory component of this standard. Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource  [(NISO, 2004)](http://www.niso.org/publications/press/UnderstandingMetadata.pdf). Because SCAT data have a spatial component by definition, geospatial metadata standards are most appropriate, but any of the following standards is acceptable:
 
 - Federal Geospatial Data Committee (FGDC) Content Standard for Digital Geospatial Metadata ([FGDC, 1998](http://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/base-metadata/v2\_0698.pdf))
 - ISO 19115 ([ISO, 2014](http://www.iso.org/iso/home/store/catalogue\_ics/catalogue\_detail\_ics.htm?csnumber=53798))
