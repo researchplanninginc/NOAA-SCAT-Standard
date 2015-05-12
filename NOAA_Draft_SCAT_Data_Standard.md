@@ -269,6 +269,8 @@ Project Open Data (POD). 2015. Project Open Data Metadata Schema v1.1. Accessibl
 
 ## Appendix A – Example Shoreline Observation Form
 
+Note that this form, by design, assumes that the user is surveying a single SCAT segment.  This practice is _not_ required by this data standard, though it is permitted.
+
 ![SCAT Form](https://cloud.githubusercontent.com/assets/6370202/7495807/e4ca6b80-f3d5-11e4-81f4-4375298d2cb4.png?raw=true)
 
 ## Appendix B - Data Interchange File Formats and Naming Conventions
