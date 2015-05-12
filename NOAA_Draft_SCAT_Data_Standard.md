@@ -45,7 +45,7 @@ SOOs (commonly termed oiling zones, where no observed oil is a type of oiling zo
 SSOOs are survey and time-specific representations of observed subsurface oiling and other shoreline characteristics. SSOOs are generally explicitly referenced with a single zero-dimensional point together with one or more scalar depth values where oiling was investigated in the field  by excavation of a pit, trench, or core.  As with SOOs, SSOOs may occasionally be referenced as polygons or lines but this is not recommended unless dictated by operational requirements. SSOOs may potentially overlap in space and time – though generally this will not occur if represented by zero-dimensional points. All SSOOs must be a child element of a survey. See Table 4 below and sections 7 of the Shoreline Oil Summary form in [Appendix A](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/Draft%20SCAT%20Data%20Standard.md#appendix-a--example-shoreline-observation-form) for structured data associated with SOOs.
 
 ####Shoreline Treatment Recommendations (STR)
-STRs are time-period-specific recommended cleanup actions prescribed/permitted for a given location. STRs may be referenced to surface or subsurface representations of any geometry from partial or complete portions of one or more segments. STRs are not necessarily related to SOOs or SSOOs, or even surveys, though this is often the case. STRs are not required to have an explicit spatial representation, but may instead be described by subsets of a shoreline representation based upon the existence of and relationships between other spatial conceptual entities that are child elements of that shoreline representation (for example, STRs may be referenced by the extent of a specific SSO from a specific survey, or to a specific segment). While STRs are often defined by segments or specific surface or subsurface oiling observations in practice, they have no other mandatory relationships with other entities.
+STRs are time-period-specific recommended cleanup actions prescribed/permitted for a given location. This location can either be defined by a spatial entity (e.g., a linear or polygonal feature) specific to the STR, or by referencing the spatial geometry of other entities. For example, the location of an STR could be the extent of a specific SSO or set of SSOs from a specific survey, or the entirety of a certain segment.
 
 ## Required Spatial Data
 
@@ -56,14 +56,12 @@ Specific conceptual entities must have explicit and unique spatial representatio
 - Surface Oiling Observations (SOOs or oiling zones)
 - Subsurface Oiling Observations (SSOOs or pits)
 
-Other conceptual entities are also required to have spatial representations, but these do not necessarily have to be stored explicitly as independent vector geometry. Instead these may be stored either as vector geometry, or they may be stored as non-spatial lists or lookup tables of other entities that do have explicit geometry.  These entities include:
+Other conceptual entities are also required to have spatial representations, but these do not necessarily have to be stored explicitly as independent vector geometry. Instead, they may be stored as lists or lookup tables into other entities that do have explicit geometry.  These entities include:
 
 - Surveys
 - Shoreline Treatment Recommendations
 
-Figure 2 is schematic of entities and their required spatial relationships over time. Surveys are required to have spatial extents consisting only of their children surface and subsurface shoreline observations. As such, the spatial extent of a survey can either be represented by a non-spatial list of its surface and subsurface shoreline observations, or by explicit vector geometry that is identical to the vector geometry of its component SSOO and SOO.  STRs may have spatial extents defined by one or more SOOs or SSOOs, one or more segments, or some other portion of a shoreline representation, or some other spatial extent.  If a STR may be uniquely defined by reference to other entities, then it can be spatially represented by a non-spatial list of these other features.  If a STR has a spatial extent that cannot be uniquely defined by one or more SOOs, SSOOs, or segments, then it must be represented by explicit vector geometry.
-
-All vector geometry features representing entities with explicit spatial representation may either tightly couple the required tabular attributes (see below) with the geometry (e.g. as attributes on a shapefile) or use a relational table structure to store the attributes elsewhere.  In the latter case, every vector geometry feature that is required to have a unique geometric representation must be have a unique ID that relates to only one tabular record.
+Figure 2 is schematic of entities and their required spatial relationships over time. Surveys are required to have spatial extents consisting only of their children surface and subsurface shoreline observations. STRs may have spatial extents defined by one or more SOOs or SSOOs, one or more segments, or some other portion of a shoreline representation, or some other spatial extent.  If an STR may be uniquely defined by reference to other entities, then it can be spatially represented by a non-spatial list of these other features.  If an STR has a spatial extent that cannot be uniquely defined by one or more SOOs, SSOOs, or segments, then it must be represented by explicit vector geometry.
 
 ![SCAT Entities](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/SCAT.png?raw=true)
 
@@ -75,19 +73,18 @@ All vector geometry features representing entities with explicit spatial represe
 
 Topology, defined here as the properties of geometric features in two dimensions, is a way to define and explicitly test for properties like adjacency, connectivity, proximity, and coincidence. Certain topological relationships are required by the standard for features with polygonal and linear spatial representations. These relationships are referenced in the descriptions of conceptual entities above. Most importantly, it is required that all linear surface oiling representations (zones) must be coincident with the linear shoreline representation. If any other entities such as subsurface oiling representations, shoreline treatment recommendations, or other entities are represented as linear features, these must also be coincident with the linear shoreline representation. This standard makes reference to spatial relationships described in the DE-9IM model ([Clementini et al., 1993](http://dx.doi.org/10.1007/3-540-56869-7_16); [Egenhoffer and Franzosa, 1991](http://dx.doi.org/10.1080/02693799108927841)) which is implemented in standard GIS software and spatial databases.
 
-The standard requires that these topological relationships exist, but does not have any requirements for how or when these relationships are enforced. For example, raw spatial data (e.g. field collected coordinates) or interim analysis products stored within a GIS or RDBMS software system are not required to comply with these topological rules.  However, the standard does require that topologically compliant data is either: 1.) automatically or regularly generated as part of such software systems and associated data management processes, or 2.) is readily and simply generated when generating data for export or interchange.
+The standard requires that these topological relationships exist, but does not have any requirements for how or when these relationships are enforced. For example, raw spatial data (e.g. field collected coordinates) or interim analysis products stored within a GIS or RDBMS software system are not required to comply with these topological rules.  However, the standard does require that topologically compliant data is either: 1.) automatically or regularly generated as part of such software systems and associated data management processes, or 2.) is readily and simply generated when generating data for export or interchange. For example, a survey team might record the location of a linear SOO (zone) using a GPS device that records points that are not coincident with the shoreline representation. Storage of these raw coordinate data is acceptable and encouraged.  To generate data compliant with this standard, however, these raw coordinates must be made topologically correct by "snapping" these coordinates to the shoreline representation and generating linear features that comply with the rules below.
 
 The standard requires the following topological relationships:
 
 - All linear features must not self-cross or self-overlap (e.g. must be simple and not complex).
-- All linear features must overlap with a linear shoreline.
+- All linear features must overlap with a linear shoreline if the relevant shoreline is represented linearly and not polygonally.
 - Linear features must not cross other linear features of the same type but may overlap other linear features of the same type.
 - Linear and polygonal features with multiple parts (e.g. multipart features or collections of features with the same geometry type) are permitted but not required.
 - All spatial features must be covered by a polygonal shoreline, intertidal zone, or potentially oiled area if such a feature exists (features may lie exactly on the boundary of a polygonal shoreline, but may not extend beyond)
-- Polygonal features may have interior holes, but multipart polygonal features may not have parts contained in interior holes in that feature. These must be represented as separate spatial features.
+- Polygonal features may have interior holes, but multipart polygonal features may not have parts contained in interior holes in that feature. These "islands" must be represented as separate spatial features.
 
-See figures 3-6 below for illustrative examples. Note that the spatial relationships described here are only required for data transmitted
-
+See figures 3-6 below for illustrative examples. 
 
 ![Figure 3](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo_fig1.png?raw=true)
 
@@ -103,7 +100,7 @@ See figures 3-6 below for illustrative examples. Note that the spatial relations
 
 ![Figure 6](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/graphics/topo_fig4.png?raw=true)
 
-**Figure 6.** All polygonal shoreline features may have interior holes, but multipart polygonal features may not have parts contained within interior holes within themselves.
+**Figure 6.** All polygonal shoreline features may have interior holes, but multipart polygonal features may not have parts contained within interior holes (i.e., cannot have an "island" within a hole).
 
 All of these relationships are enforceable and testable in most commercial or open-source vector-based GIS, spatially enabled database software packages, or topology libraries including ArcGIS, Quantum GIS, Oracle Spatial, PostGIS, Java Topology Suite (JTS), and others.
 
@@ -113,7 +110,7 @@ This standard includes a set of core attributes for each conceptual entity repre
 
 - Should begin with alphabetical characters.
 - Should not include spaces, dashes, or special characters other than underscores.
-- Should avoid unmodified words commonly reserved by GIS or RDMS software systems or programming constructs, such as "date", "order", "file", "range", "loop", "by" etc
+- Should avoid unmodified words commonly reserved by GIS or RDMS software systems or programming constructs, such as "date", "order", "file", "range", "loop", "by" etc.  For example, "date" is unacceptable as a field name\, but "obs_date" is acceptable.
 - Should be limited to 10 characters where possible to meet limitations of the ESRI shapefile format.
 - Should be human-readable where possible.
 
