@@ -6,10 +6,11 @@ This repository contains a proposed data standard for observational Shoreline Cl
 
 The draft data standard proposed here includes:
 
-- A conceptual data model, consisting of a set of proposed entities and relationships,
-- Rules for spatial representation of these entities,
-- Required core tabular attributes describing these entities,
-- Required spatial relationships and logical relationships between entities, and
-- Minimum documentation requirements.
+1.	Recommended Quality Assurance/Quality Control (QAQC) and workflow terminology and steps
+2.	A conceptual data model, consisting of a set of proposed entities and relationships,
+3.	Required core tabular attributes describing these entities,
+4.	Rules for spatial representation of these entities, and required spatial relationships between entities,
+5.	Data interchange file formats and data structures, and
+6.	Minimum documentation requirements.
 
 Currently, this repository contains a draft document in [markdown (.md)](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/NOAA_Draft_SCAT_Data_Standard.md) and [Microsoft Word (.docx)](https://github.com/researchplanninginc/NOAA-SCAT-Standard/blob/master/NOAA_Draft_SCAT_Data_Standard.docx?raw=true) format describing the proposed standard.  The markdown version is currently being used for version tracking and collaborative editing. In the future, template spatial and tabular data structures will be deposited here. 
