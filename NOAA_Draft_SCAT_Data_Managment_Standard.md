@@ -2,7 +2,7 @@
   <span id="purpose" class="anchor"><span id="shoreline-cleanup-assessment-technique-s" class="anchor"></span></span>![](media/image1.jpeg)   Shoreline Cleanup Assessment Technique (SCAT) Digital Data Management Standard – Draft
   -----------------------------------------------------------------------------------------------------------------------------------------   ======================================================================================
                                                                                                                                               
-                                                                                                                                              **6/2017**
+                                                                                                                                              **10/2017**
   ------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -55,15 +55,14 @@ The data standard proposed here includes:
 2.  A conceptual data model, consisting of a set of proposed entities
     and relationships,
 
-3.  4.  Rules for spatial representation of these entities, and r
+3.  Required core tabular attributes describing these entities,
 
-5.  equired spatial relationships between entities,
+4.  Rules for spatial representation of these entities, and required
+    spatial relationships between entities,
 
-6.  7.  8.  Data interchange file formats and data structures, and
+5.  Data interchange file formats and data structures, and
 
-9.  Minimum documentation requirements.
-
-10. 
+6.  Minimum documentation requirements.
 
 This proposed data standard does not include mandatory logical data
 model (a set of explicitly required normalized tables, attributes, and
@@ -115,7 +114,7 @@ classes of data collected and managed by SCAT.
 
 ![](media/image2.png)
 
-**Figure** **1.** Schematic of spatial relationships among conceptual
+**Figure 1.** Schematic of spatial relationships among conceptual
 entities over time showing a shoreline partitioned into segments. SOOs
 from a survey on Dates 1 and 2 are depicted as blue and red lines
 coincident with the shoreline for No Oiling Observed and Oiled SOOs
@@ -354,17 +353,10 @@ a spatial extent that cannot be uniquely defined by one or more SOOs,
 SSOOs, or segments, then it must be represented by explicit vector
 geometry.
 
--   -   -   -   
+<span id="required-spatial-data"
+class="anchor"></span>![](media/image4.png)
 
--   -   -   -   
-
-<!-- -->
-
--   -   
-
-![](media/image4.png)
-
-**Figure** **3.** Schematic of logical relationships among conceptual
+**Figure 3.** Schematic of logical relationships among conceptual
 entities over time. Entities with solid outlines are have unique
 individual spatial representations. Entities with dashed outlines have
 spatial extents defined by the spatial representations of other
@@ -387,10 +379,10 @@ representation. If any other entities such as subsurface oiling
 representations, shoreline treatment recommendations, or other entities
 are represented as linear features, these must also be coincident with
 the linear shoreline representation. This standard makes reference to
-spatial relationships described in the DE-9IM model (Clementini et al.,
-1993; [Egenhoffer and Franzosa,
-1991](http://dx.doi.org/10.1080/02693799108927841)) which is implemented
-in standard GIS software and spatial databases.
+spatial relationships described in the DE-9IM model ([Clementini et al.,
+1993](http://dx.doi.org/10.1007/3-540-56869-7_16); [Egenhoffer and
+Franzosa, 1991](http://dx.doi.org/10.1080/02693799108927841)) which is
+implemented in standard GIS software and spatial databases.
 
 The standard requires that these topological relationships exist, but
 does not have any requirements for how or when these relationships are
@@ -439,26 +431,26 @@ See figures 4-7 below for illustrative examples.
 
 ![](media/image5.png)
 
-**Figure** **4.** Linear features may intersect other linear features at
+**Figure 4.** Linear features may intersect other linear features at
 endpoints but may not self-cross, or self-overlap. Linear feature
 endpoints depicted as dots, whereas feature vertices are not depicted.
 
 ![](media/image6.png)
 
-**Figure** **5.** All non-shoreline linear features must overlap linear
+**Figure 5.** All non-shoreline linear features must overlap linear
 shoreline features
 
 ![](media/image7.png)
 
-**Figure** **6.** All non-shoreline spatial features must be covered by
+**Figure 6.** All non-shoreline spatial features must be covered by
 polygonal shoreline features (lie in the interior or along the boundary
 of the polygonal shoreline feature) if such features exist.
 
 ![](media/image8.png)
 
-**Figure** **7.** All polygonal shoreline features may have interior
-holes, but multipart polygonal features may not have parts contained
-within interior holes (i.e., cannot have an "island" within a hole).
+**Figure 7.** All polygonal shoreline features may have interior holes,
+but multipart polygonal features may not have parts contained within
+interior holes (i.e., cannot have an "island" within a hole).
 
 All of these relationships are enforceable and testable in most
 commercial or open-source vector-based GIS, spatially enabled database
@@ -523,189 +515,283 @@ related data is required to be collected in the field, though this is
 possible and permitted.
 
   **Attribute**     **Description**                                        **Suggested Field Name**   **Type**         **Codeset or valid values**
-  ----------------- ------------------------------------------------------ -------------------------- ---------------- --------------------------------------------------------------------------------------------------------------------------
+  ----------------- ------------------------------------------------------ -------------------------- ---------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   Segment ID        Unique identifier                                      SEG\_ID                    Text             Alphanumeric text string containing identifier sufficient to uniquely identify segment
   Start date        Beginning date of applicability of shoreline segment   START\_DATE                Date             Valid date in local time zone
   End date          Ending date of applicability of shoreline segment      STOP\_DATE                 Date             Valid date in local time zone
-  Start Latitude    Latitude of beginning of linear segment                START\_LAT                 Numeric          Floating point values in decimal degrees.
-  Start Longitude   Longitude of beginning of linear segment               START\_LON                 Numeric          Floating point values in decimal degrees.
-  End Latitude      Latitude of end of linear segment                      END\_LAT                   Numeric          Floating point values in decimal degrees. Null values permitted only for segments represented as a single point.
-  End Longitude     Longitude of end of linear segment                     END\_LON                   Numeric          Floating point values in decimal degrees. Null values permitted only for segments represented as a single point.
-  Primary ESI       Primary ESI type of segment                            ESI\_PRIM                  Text - Codeset   Estuarine, Riverine, or Lacustrine Environmental Sensitivity Index (ESI) shoreline classification. See NOAA, 2002; 2013.
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
-                                                                                                                       
+  Start Latitude    Latitude of beginning of linear segment                START\_LAT                 Numeric          Floating point values in decimal degrees in WGS84 datum.
+  Start Longitude   Longitude of beginning of linear segment               START\_LON                 Numeric          Floating point values in decimal degrees in WGS84 datum.
+  End Latitude      Latitude of end of linear segment                      END\_LAT                   Numeric          Floating point values in decimal degrees in WGS84 datum. Null values permitted only for segments represented as a single point.
+  End Longitude     Longitude of end of linear segment                     END\_LON                   Numeric          Floating point values in decimal degrees in WGS84 datum. Null values permitted only for segments represented as a single point.
+  Primary ESI       Primary ESI type of segment                            ESI\_PRIM                  Text - Codeset   Estuarine, Riverine, or Lacustrine Environmental Sensitivity Index (ESI) shoreline classification. See [NOAA, 2002](http://response.restoration.noaa.gov/sites/default/files/ESI_Guidelines.pdf);[ 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf).
 
 **Table 2.** Required tabular attributes for Surveys. Attributes
 required to be collected in the field via form or electronic data
 collection indicated (“Field Req.”).
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Attribute**       **Field** **Req.**   **Description**                 **Suggested Field Name**   **Type**               **Codeset or valid values**
-  ------------------- -------------------- ------------------------------- -------------------------- ---------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Survey ID           No                   Unique identifier               SURV\_ID                   Text                   Alphanumeric text string containing identifier sufficient to uniquely identify survey within and across dates
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Attribute**       **Field Req.**   **Description**                 **Suggested Field Name**   **Type**               **Codeset or valid values**
+  ------------------- ---------------- ------------------------------- -------------------------- ---------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Survey ID           No               Unique identifier               SURV\_ID                   Text                   Alphanumeric text string containing identifier sufficient to uniquely identify survey within and across dates
 
-  Survey Date         Yes                  Date of survey                  SURV\_DATE                 Date                   Valid date in local time zone
+  Survey Date         Yes              Date of survey                  SURV\_DATE                 Date                   Valid date in local time zone
 
-  Survey Start Time   Yes                  Time of survey start            START\_TIME                Time                   Valid time in local time zone
+  Survey Start Time   Yes              Time of survey start            START\_TIME                Time                   Valid time in local time zone
 
-  Survey Stop Time    Yes                  Time of survey end              STOP\_TIME                 Time                   Valid time in local time zone
+  Survey Stop Time    Yes              Time of survey end              STOP\_TIME                 Time                   Valid time in local time zone
 
-                                                                                                                             
+  Survey By           Yes              Personnel conducting survey     SURV\_PER1                 Text                   Name and organization of first team member conducting survey. Though not required by standard, this may be pulled from lookup table. Multiple fields required to hold unknown count of multiple values.
 
-  Survey By           Yes                  Personnel conducting survey     SURV\_PER1                 Text                   Name and organization of first team member conducting survey. Though not required by standard, this should be pulled from lookup table. Multiple fields required to hold unknown count of multiple values.
+  Survey By           Yes                                              SURV\_PER2                 Text                   See above.
 
-  Survey By           Yes                                                  SURV\_PER2                 Text                   See above.
+  Survey By           Yes                                              SURV\_PER3                 Text                   See above.
 
-  Survey By           Yes                                                  SURV\_PER3                 Text                   See above.
+  Survey By           Yes                                              SURV\_PER4                 Text                   See above.
 
-  Survey By           Yes                                                  SURV\_PER4                 Text                   See above.
+  Survey By           Yes                                              SURV\_PER5                 Text                   See above.
 
-  Survey By           Yes                                                  SURV\_PER5                 Text                   See above.
+  Survey By           Yes                                              SURV\_PER6                 Text                   See above.
 
-  Survey By           Yes                                                  SURV\_PER6                 Text                   See above.
+  Segments            No               Segment(s) surveyed             SEGMENTS                   Text or Lookup Table   
 
-  Segments            No                   Segment(s) surveyed             SEGMENTS                   Text or Lookup Table   
-
-  Survey Method       Yes                  Method used to conduct survey   SURV\_TYPE                 Text - Codeset         Codes:
-                                                                                                                             
-                                                                                                                             Foot; ATV; Airboat; Boat; Helicopter/Aircraft; Overlook; UAS; Dog
-  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Survey Method       Yes              Method used to conduct survey   SURV\_TYPE                 Text - Codeset         Codes:
+                                                                                                                         
+                                                                                                                         Foot; ATV; Airboat; Boat; Helicopter/Aircraft; Overlook; UAS; Dog
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Table 3.** Required tabular attributes for Surface Oiling Observations
 (SSOs) or oiling zones. Attributes required to be collected in the field
 via form or electronic data collection indicated (“Field Req.”).
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Attribute**                         **Field** **Req.**   **Description**                                                                                                                 **Suggested Field Name**   **Type**                      **Codeset or valid values**
-  ------------------------------------- -------------------- ------------------------------------------------------------------------------------------------------------------------------- -------------------------- ----------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Zone ID                               No                   Unique identifier                                                                                                               ZONE\_ID                   Text                          Alphanumeric text string containing identifier sufficient to uniquely identify oiled zone within survey
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Attribute**                         **Field Req.**   **Description**                                                                                                                 **Suggested Field Name**   **Type**                      **Codeset or valid values**
+  ------------------------------------- ---------------- ------------------------------------------------------------------------------------------------------------------------------- -------------------------- ----------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Zone ID                               No               Unique identifier                                                                                                               ZONE\_ID                   Text                          Alphanumeric text string containing identifier sufficient to uniquely identify oiled zone within survey
 
-  Tidal Zone                            Yes                  Categorical descriptor for average/dominant elevation relative to tidal or other datum                                          TIDAL\_ZONE                Text - Codeset                Codes:
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      LI; MI; UI; SU; LI/MI; MI/UI; UI/SU; LI/MI/UI; LI/MI/UI/SU
+  Tidal Zone                            Yes              Categorical descriptor for average/dominant elevation relative to tidal or other datum                                          ZONE\_TIDAL                Text - Codeset                Codes:
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  LI: Lower intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  MI: Middle intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  UI: Upper intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  SU: Supratidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  LI/MI Lower- to middle intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  MI/UI: Middle- to upper intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  UI/SU Upper intertidal to supratidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  LI/MI/UI Lower- to upper intertidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  MI/UI/SI: Middle intertidal to supratidal;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  LI/MI/UI/SU: Lower intertidal to supratidal
 
-  Start Latitude                        Yes                  Latitude of beginning of linear zone                                                                                            START\_LAT                 Numeric                       Floating point values in decimal degrees.
+  Start Latitude                        Yes              Latitude of beginning of linear zone                                                                                            START\_LAT                 Numeric                       Floating point values in decimal degrees in WGS84 datum.
 
-  Start Longitude                       Yes                  Longitude of beginning of linear zone                                                                                           START\_LON                 Numeric                       Floating point values in decimal degrees.
+  Start Longitude                       Yes              Longitude of beginning of linear zone                                                                                           START\_LON                 Numeric                       Floating point values in decimal degrees in WGS84 datum.
 
-  End Latitude                          Yes                  Latitude of end of linear zone                                                                                                  END\_LAT                   Numeric                       Floating point values in decimal degrees. Null values permitted only for observations represented as a single point.
+  End Latitude                          Yes              Latitude of end of linear zone                                                                                                  END\_LAT                   Numeric                       Floating point values in decimal degrees in WGS84 datum. Null values permitted only for observations represented as a single point.
 
-  End Longitude                         Yes                  Longitude of end of linear zone                                                                                                 END\_LON                   Numeric                       Floating point values in decimal degrees. Null values permitted only for observations represented as a single point.
+  End Longitude                         Yes              Longitude of end of linear zone                                                                                                 END\_LON                   Numeric                       Floating point values in decimal degrees in WGS84 datum. Null values permitted only for observations represented as a single point.
 
-  Width                                 Yes                  Average across-shore width of oiled zone in meters                                                                              WIDTH                      Numeric                       Floating point values in meters. Zero values permitted only for NO observations.
+  Width                                 Yes              Average across-shore width of oiled zone in meters                                                                              WIDTH                      Numeric                       Floating point values in meters. Zero values permitted only for NO observations.
 
-  Distribution                          Yes                  Average areal distribution of surface oil as percentage or ratio of substrate of oiled zone or categorical descriptor of same   OIL\_DIST                  Numeric *OR* Text - Codeset   Floating point values as percentage or ratio. Zero values permitted only for NOO observations. Null values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes (if codeset used):
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      C; B; P; S; T
+  Distribution                          Yes              Average areal distribution of surface oil as percentage or ratio of substrate of oiled zone or categorical descriptor of same   SO\_DIST                   Numeric *OR* Text - Codeset   Floating point values as percentage or ratio. Zero values permitted only for NOO observations. Null values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes (if codeset used):
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  CN: Continuous ;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  BR: Broken;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  PT: Patchy;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  SP: Sporadic;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  TR: Trace
 
-  Thickness                             Yes                  Average thickness of surface oil in cm or categorical descriptor of same                                                        OIL\_THICK                 Numeric *OR* Text - Codeset   Floating point values in cm. Zero values permitted only for NO observations. Null or blank values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null or blank for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes (if codeset used):
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      TO; CV; CT; ST; FL
+  Thickness                             Yes              Average thickness of surface oil in cm or categorical descriptor of same                                                        SO\_THICK                  Numeric *OR* Text - Codeset   Floating point values in cm. Zero values permitted only for NO observations. Null or blank values permitted only for observations with discrete oiling counts, unit areas, and sizes. May only be null or blank for NO observations or only for observations with discrete oiling counts, unit areas, and sizes.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes (if codeset used):
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  TO: Thick oil;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  CV: Cover;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  CT: Coat;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  ST: Stain;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  FL: Film
 
-  Character                             Yes                  Categorical descriptor of dominant oil character within oiled zone                                                              OIL\_CHAR                  Text - Codeset                May only be null or blank only for observations with discrete oiling counts, unit areas, and sizes.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes:
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      FR; MS; TB; PT; TC; SR; AP; NO
+  Character                             Yes              Categorical descriptor of dominant oil character within oiled zone                                                              SO\_CHAR                   Text - Codeset                May only be null or blank only for observations with discrete oiling counts, unit areas, and sizes.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes:
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  FR: Fresh oil;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  MS: Mousse/emulsion;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  TB: Tarballs;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  PT: Patties;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  TC: Tarry coat;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  SR: Surface residue;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  AP: Asphalt pavement;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  NO: No oil observed
 
-  Substrate                             Yes                  Categorical descriptor for location of surface oil (sediment/soil, vegetation canopy, or both)                                  SUBSTR                     Text - Codeset                Null or blank values permitted only for NO observations.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes:
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      S;V;B
+  Substrate                             Yes              Categorical descriptor for location of surface oil (sediment/soil, vegetation canopy, or both)                                  SUBSTR                     Text - Codeset                Null or blank values permitted only for NO observations.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes:
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  S: Sediment;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  V: Vegetation canopy;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  B: Both sediment and canopy
 
-  Discrete oiling count per unit area   Yes                  Count per unit area of tarballs or residue balls in oiled zone                                                                  TB\_CNT                    Numeric                       Integer values. Zero values permitted only for NO observations or observations with areal distribution and thickness as above.
+  Discrete oiling count per unit area   Yes              Count per unit area of tarballs or residue balls in oiled zone                                                                  TB\_CNT                    Numeric                       Integer values. Zero values permitted only for NO observations or observations with areal distribution and thickness as above.
 
-  Discrete oiling count unit area       Yes                  Area of count of tarballs or residue balls in oiled zone                                                                        TB\_AREA                   Numeric                       Floating point values. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
+  Discrete oiling count unit area       Yes              Area of count of tarballs or residue balls in oiled zone                                                                        TB\_AREA                   Numeric                       Floating point values. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
 
-  Discrete oiling count unit area       Yes                  Units area of count of tarballs or residue balls in oiled zone                                                                  TB\_ARUNIT                 Text - Codeset                Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes:
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      M2; M100; M; ZONE
+  Discrete oiling count unit area       Yes              Unit area or length of count of tarballs or residue balls in oiled zone                                                         TB\_ARUNIT                 Text - Codeset                Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes:
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  M2: Per square meter;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  M100: Per 100 meter alongshore;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  M: Per meter alongshore;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  ZONE: Per area of zone
 
-  Discrete oiling avg. size             Yes                  Average planimetric diameter in cm of tarballs or residue balls in oiled zone.                                                  TB\_AVSIZE                 Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
+  Discrete oiling avg. size             Yes              Average planimetric diameter in cm of tarballs or residue balls in oiled zone.                                                  TB\_AVSIZE                 Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
 
-  Discrete oiling large size            Yes                  Largest planimetric diameter in cm of tarballs or residue balls in oiled zone.                                                  TB\_LGSIZE                 Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
+  Discrete oiling large size            Yes              Largest planimetric diameter in cm of tarballs or residue balls in oiled zone.                                                  TB\_LGSIZE                 Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
 
-  Type of discrete oiling               Yes                  Dominant categorical descriptor of tarballs, residue balls or other discrete oiling within oiled zone                           TB\_TYPE                   Text - Codeset                Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      Codes:
-                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                                      F; E; S; W; R; O
+  Type of discrete oiling               Yes              Dominant categorical descriptor of tarballs, residue balls or other discrete oiling within oiled zone                           TB\_TYPE                   Text - Codeset                Null or blank values permitted only for NO observations or observations with areal distribution and thickness as above.
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  Codes:
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  F: Fresh oil;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  E: Emulsion;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  S: Sticky;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  W: Weathered;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  R: Residue;
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  O: Other
 
-  Plant oiling bottom elevation         Yes                  Average vertical elevation of lowest oiling on plant canopy in cm from sediment surface                                         P\_OILBOT                  Numeric                       Floating point values in centimeters.
+  Plant oiling bottom elevation         Yes              Average vertical elevation of lowest oiling on plant canopy in cm from sediment surface                                         P\_OILBOT                  Numeric                       Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate \<\> P or B).
 
-  Plant oiling top elevation            Yes                  Average vertical elevation of highest oiling on plant canopy in cm from sediment substrate                                      P\_OILTOP                  Numeric                       Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate \<\> P or B).
+  Plant oiling top elevation            Yes              Average vertical elevation of highest oiling on plant canopy in cm from sediment substrate                                      P\_OILTOP                  Numeric                       Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate \<\> P or B).
 
-  Plant height                          Yes                  Average height of plant canopy in cm from sediment surface                                                                      P\_HEIGHT                  Numeric                       Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate \<\> P or B).
+  Plant height                          Yes              Average height of plant canopy in cm from sediment surface                                                                      P\_HEIGHT                  Numeric                       Floating point values in centimeters. Zero values only permitted for NO or non-plant oiling observations (Substrate \<\> P or B).
 
-  ESI Type                              Yes                  ESI type                                                                                                                        ESI                        Text - Codeset                Estuarine, Riverine, or Lacustrine Environmental Sensitivity Index (ESI) shoreline classification. See NOAA, 2002; 2013.
+  ESI Type                              Yes              ESI type                                                                                                                        ESI                        Text - Codeset                Estuarine, Riverine, or Lacustrine Environmental Sensitivity Index (ESI) shoreline classification. See [NOAA, 2002](http://response.restoration.noaa.gov/sites/default/files/ESI_Guidelines.pdf);[ 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf).
 
-  Category                              No                   Categorical descriptor of relative oiling intensity.                                                                            OIL\_CAT                   Text - Codeset                Computed. See [NOAA, 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf).
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Category                              No               Categorical descriptor of relative oiling intensity.                                                                            ZONE\_CAT                  Text - Codeset                Computed. See [NOAA, 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf).
+
+  Survey ID                                              Unique identifier                                                                                                               SURV\_ID                   Text                          Alphanumeric text string containing identifier sufficient to uniquely identify survey within and across dates. See survey table.
+
+  Segment ID                                             Unique identifier                                                                                                               SEG\_ID                    Text                          Alphanumeric text string containing identifier sufficient to uniquely identify segment. See segment table.
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Table 4.** Required tabular attributes for Subsurface Oiling
 Observations (SSOOs). Attributes required to be collected in the field
 via form or electronic data collection indicated.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Attribute**          **Field Req’d**   **Description**                                                                                                                                                                         **Suggested Field Name**   **Type**                      **Codeset or valid values**
-  ---------------------- ----------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------- ----------------------------- -------------------------------------------------------------------------------------------------------------------
+  ---------------------- ----------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------- ----------------------------- ----------------------------------------------------------------------------------------------------------------------------------
   Pit ID                 No                Unique identifier                                                                                                                                                                       PIT\_ID                    Text                          Alphanumeric text string containing identifier sufficient to uniquely identify pit, trench, or core within survey
 
   Pit Latitude           Yes               Latitude of pit                                                                                                                                                                         PIT\_LAT                   Numeric                       Floating point values in decimal degrees.
 
   Pit Longitude          Yes               Longitude of pit                                                                                                                                                                        PIT\_LON                   Numeric                       Floating point values in decimal degrees.
 
-  Tidal Zone             Yes               Categorical descriptor for average/dominant elevation relative to tidal or other datum                                                                                                  TIDAL\_ZONE                Text - Codeset                Codes:
+  Tidal Zone             Yes               Categorical descriptor for average/dominant elevation relative to tidal or other datum                                                                                                  PIT\_TIDAL                 Text - Codeset                Codes:
                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                                                                                                            LITZ; MITZ; UITZ; SUTZ
+                                                                                                                                                                                                                                                                                            LI: Lower intertidal;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            MI: Middle intertidal;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            UI: Upper intertidal;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            SU: Supratidal
 
   Pit depth              Yes               Maximum depth of subsurface pit, trench or core in cm below sediment surface.                                                                                                           DEPTH                      Numeric                       Floating point values in centimeters. No zero values permitted.
 
-  Oiling top depth       Yes               Average depth of the top of observed subsurface oiling in cm below sediment surface.                                                                                                    OIL\_TOP                   Numeric                       Floating point values in centimeters. Null or blank values only permitted for NO observations.
+  Oiling top depth       Yes               Average depth of the top of observed subsurface oiling in cm below sediment surface.                                                                                                    SSO\_TOP                   Numeric                       Floating point values in centimeters. Null or blank values only permitted for NO observations.
 
-  Oiling bottom depth    Yes               Average depth of the bottom of observed subsurface oiling in cm below sediment surface.                                                                                                 OIL\_BOT                   Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations.
+  Oiling bottom depth    Yes               Average depth of the bottom of observed subsurface oiling in cm below sediment surface.                                                                                                 SSO\_BOT                   Numeric                       Floating point values in centimeters. Zero, null or blank values permitted only for NO observations.
 
-  Character              Yes               Categorical descriptor of dominant oil character within oiled pit                                                                                                                       OIL\_CHAR                  Text - Codeset                Null or blank values not permitted.
+  Character              Yes               Categorical descriptor of dominant oil character within oiled pit                                                                                                                       SSO\_CHAR                  Text - Codeset                Null or blank values not permitted.
                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                             Codes:
                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                                                                                                            SR; SAP; OP; PP; OR; OF; TR; NO
+                                                                                                                                                                                                                                                                                            SR: Surface residue;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            SAP: Subsurface asphalt pavement;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            OP: Oil-filled pores;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            PP: Partially filled pores;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            OR: Oil residue;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            OF: Oil film;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            TR: Trace;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            NO: No oil observed
 
-  Distribution           Yes               Average areal distribution of subsurface oil within vertical oil interval as percentage or ratio of surface area in excavated pit, trench, or core or categorical descriptor of same.   OIL\_DIST                  Numeric *OR* Text - Codeset   Floating point values as percentage or ratio. Zero values permitted only for NOO observations.
+  Distribution           Yes               Average areal distribution of subsurface oil within vertical oil interval as percentage or ratio of surface area in excavated pit, trench, or core or categorical descriptor of same.   SSO\_DIST                  Numeric *OR* Text - Codeset   Floating point values as percentage or ratio. Zero values permitted only for NOO observations.
                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                             Codes (if codeset used):
                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                                                                                                            C; B; P; S; T
+                                                                                                                                                                                                                                                                                            CN: Continuous;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            BR: Broken;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            PT: Patchy;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            SP: Sporadic;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            TR: Trace
 
   Depth to Water Table   Yes               Average depth of the bottom of observed water level in cm below sediment surface                                                                                                        WATER\_DEP                 Numeric                       Floating point values in centimeters.
 
   Sheen Color            Yes               Categorical descriptor of sheen on water table in pit, trench, or core if present                                                                                                       SHEEN                      Text - Codeset                Codes:
                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                                                                                                            B; R; S; N
+                                                                                                                                                                                                                                                                                            B: Brown;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            R: Rainbow;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            S: Silver;
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            N: No sheen observed
 
   Clean Below            Yes               Boolean indicator of presence of clean sediment below oiled sediment                                                                                                                    CLN\_BELOW                 Boolean                       T/F
 
-  Category               No                Categorical descriptor of relative oiling intensity in pit                                                                                                                              OIL\_CAT                   Text - Codeset                Computed. See NOAA, 2013.
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Category               No                Categorical descriptor of relative oiling intensity in pit                                                                                                                              PIT\_CAT                   Text - Codeset                Computed. See [NOAA, 2013](http://response.restoration.noaa.gov/sites/default/files/manual_shore_assess_aug2013.pdf).
+
+  Survey ID                                Unique identifier                                                                                                                                                                       SURV\_ID                   Text                          Alphanumeric text string containing identifier sufficient to uniquely identify survey within and across dates. See survey table.
+
+  Segment ID                               Unique identifier                                                                                                                                                                       SEG\_ID                    Text                          Alphanumeric text string containing identifier sufficient to uniquely identify segment. See segment table.
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Logical Relationships
 ---------------------
@@ -744,18 +830,10 @@ in the field, though this is possible and permitted.
 
   **Attribute**         **Description**                 **Suggested Field Name**   **Type**               **Codeset or valid values**
   --------------------- ------------------------------- -------------------------- ---------------------- -------------------------------------------------------------------------------------------------------------------
-  STR ID                Unique identifier               STR\_ID                    Text                   Alphanumeric text string containing identifier sufficient to uniquely identify survey within and across dates
-                                                                                                          
-                                                                                                          
-                                                                                                          
+  STR ID                Unique identifier               STR\_ID                    Text                   Alphanumeric text string containing identifier sufficient to uniquely identify STR
   STR Issue Date        Date STR was issued as permit   STR\_ISSUE                 Date                   Valid date in local time zone
   STR Completion Date   Date STR was completed          STR\_COMPL                 Date                   Valid date in local time zone
   STR Replaced By       Superseding STR                 STR\_REPL                  Text or lookup table   Either text or lookup table containing or pointing to one or more STR IDs that replaced or superseded if present.
-                                                                                                          
-                                                                                                          
-                                                                                                          
-                                                                                                          
-                                                                                                          
 
 6. Data Interchange File Formats and Naming Conventions
 -------------------------------------------------------
@@ -806,11 +884,8 @@ Note that templates for standard-compliant data interchange files in
 ESRI shapefile (.SHP), comma-separated text (.CSV) files, and ESRI File
 Geodatabase format for each conceptual entity accompany this document.
 
-7. 
----
-
-Metadata
---------
+7. Metadata
+-----------
 
 Documentation sufficient to allow users not participating in data
 collection or management during a spill event to understand and use SCAT
@@ -822,11 +897,14 @@ Because SCAT data have a spatial component by definition, geospatial
 metadata standards are most appropriate, but any of the following
 standards is acceptable:
 
--   -   Federal Geospatial Data Committee (FGDC) Content Standard for
+-   ISO 19115 ([ISO,
+    2014](http://www.iso.org/iso/home/store/catalogue_ics/catalogue_detail_ics.htm?csnumber=53798))
+
+-   Federal Geospatial Data Committee (FGDC) Content Standard for
     Digital Geospatial Metadata ([FGDC,
     1998](http://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/base-metadata/v2_0698.pdf))
 
--   -   Project Open Data Metadata Schema v1.1 ([POD,
+-   Project Open Data Metadata Schema v1.1 ([POD,
     2015](https://project-open-data.cio.gov/v1.1/schema/))
 
 See references for internet resources specific to each of these
@@ -936,13 +1014,3 @@ standard, though it is permitted.
 
 <span id="appendix-b---data-interchange-file-forma"
 class="anchor"></span>
-
--   -   -   
-
-<!-- -->
-
--   -   -   -   -   
-
-<!-- -->
-
--   -   -   -   
