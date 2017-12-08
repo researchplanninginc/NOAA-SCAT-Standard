@@ -25,7 +25,6 @@ Currently, this repository contains a draft document in Microsoft Word (.docx) f
 **0.2.12.2017**
 - changed water level field to be more generic (e.g. riverine or non-tidal water level fluctuations)
 - changed ESI type to shoreline type to be more generic (e.g. ice/snow shoreline types)
-- added appendix on reccommended shoreline type and water level codes and uses
 - added GEO/JSON to list of acceptable data interchange file formats
 - included synthetic demonstration data in all acceptable file formats 
 
