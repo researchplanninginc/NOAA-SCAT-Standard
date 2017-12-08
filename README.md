@@ -17,7 +17,9 @@ The draft data standard proposed here includes:
 - Data interchange file formats and data structures, and
 - Minimum documentation requirements.
 
-Currently, this repository contains a draft document in Microsoft Word (.docx) format describing the proposed standard. The markdown version is currently being used for version tracking and collaborative editing. In the future, template spatial and tabular data structures will be deposited here.
+Currently, this repository contains a draft document in Microsoft Word (.docx) format describing the proposed standard. The markdown version is currently being used for version tracking and collaborative editing. 
+
+Accompanying this document, are a zipped set of demonstration SCAT interchange files.  These files contain synthetic SCAT data (not from an actual incident) in all three formats acceptable according to the current version of the standard (SHP/CSV, ESRI FGDB, and JSON/GEOJSON).
 
 # Version Change History
 
