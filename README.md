@@ -21,7 +21,6 @@ Currently, this repository contains a draft document in Microsoft Word (.docx) f
 
 # Version Change History
 
-
 **0.2.12.2017**
 - changed water level field to be more generic (e.g. riverine or non-tidal water level fluctuations)
 - changed ESI type to shoreline type to be more generic (e.g. ice/snow shoreline types)
@@ -29,7 +28,7 @@ Currently, this repository contains a draft document in Microsoft Word (.docx) f
 - included synthetic demonstration data in all acceptable file formats 
 
 **0.1.10.2017**
-- added explicit foreign key fields for zones and pits
+- added explicit foreign key (survey and segment) fields for zones and pits
 - changed field names to be unique across tables
 
 **0.0.8.2017**
@@ -49,7 +48,7 @@ Currently, this repository contains a draft document in Microsoft Word (.docx) f
 
 **0.0.5.2017**
 - changed title to "data managment standard" to reflect inclusion of QAQC steps etc.
-- added plant height overall
+- added plant height overall for oiled vegetation zones
 - added explicit lat/lon or start-stop lat/lon to pit, zone, and segments
-- added start stop date of applicability to segments to track shoreline change over time.
+- added start stop date of applicability to segments to track shoreline change over time
 - editorial changes to text
