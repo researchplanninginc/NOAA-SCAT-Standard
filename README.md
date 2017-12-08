@@ -19,32 +19,27 @@ The draft data standard proposed here includes:
 
 Currently, this repository contains a draft document in Microsoft Word (.docx) format describing the proposed standard. The markdown version is currently being used for version tracking and collaborative editing. In the future, template spatial and tabular data structures will be deposited here.
 
-**Version Change History**
+# Version Change History
 
 
-0.2.12.2017
-===========
+**0.2.12.2017**
 - changed water level field to be more generic (e.g. riverine or non-tidal water level fluctuations)
 - changed ESI type to shoreline type to be more generic (e.g. ice/snow shoreline types)
 - added appendix on reccommended shoreline type and water level codes and uses
 - added GEO/JSON to list of acceptable data interchange file formats
 - included synthetic demonstration data in all acceptable file formats 
 
-0.1.10.2017
-======================
+**0.1.10.2017**
 - added explicit foreign key fields for zones and pits
 - changed field names to be unique across tables
 
-0.0.8.2017
-======================
+**0.0.8.2017**
 - editorial changes to text
 
-0.0.7.2017
-======================
+**0.0.7.2017**
 - editorial changes to text
 
-0.0.6.2017
-======================
+**0.0.6.2017**
 - added QAQC languange and reorganized document
 - removed non-essential segment fields (backshore character, access, etc.)
 - rmoved non-essential STR fields
@@ -53,8 +48,7 @@ Currently, this repository contains a draft document in Microsoft Word (.docx) f
 - added lacustrine and riverine ESI scales to list of acceptable codesets for ESI Type
 - added UAS and dog to survey types
 
-0.0.5.2017
-======================
+**0.0.5.2017**
 - changed title to "data managment standard" to reflect inclusion of QAQC steps etc.
 - added plant height overall
 - added explicit lat/lon or start-stop lat/lon to pit, zone, and segments
