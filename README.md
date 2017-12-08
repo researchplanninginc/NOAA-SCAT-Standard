@@ -19,11 +19,11 @@ The draft data standard proposed here includes:
 
 Currently, this repository contains a draft document in Microsoft Word (.docx) format describing the proposed standard. The markdown version is currently being used for version tracking and collaborative editing. In the future, template spatial and tabular data structures will be deposited here.
 
-##Version Change History
+**Version Change History**
 
 
 0.2.12.2017
-======================
+===========
 - changed water level field to be more generic (e.g. riverine or non-tidal water level fluctuations)
 - changed ESI type to shoreline type to be more generic (e.g. ice/snow shoreline types)
 - added appendix on reccommended shoreline type and water level codes and uses
